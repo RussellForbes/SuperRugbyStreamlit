@@ -138,22 +138,25 @@ fig.update_layout(
         showline=False,
         showgrid=False,
         showticklabels=False,
-        range=[-1,1]
+        range=[-0.15,0.15]
     ),
     yaxis2=dict(
         showline=False,
         showgrid=False,
-        showticklabels=False
+        showticklabels=False,
+        range=[-0.15, 0.15]
     ),
     yaxis3=dict(
         showline=False,
         showgrid=False,
-        showticklabels=False
+        showticklabels=False,
+        range=[-0.15, 0.15]
     ),
     yaxis4=dict(
         showline=False,
         showgrid=False,
-        showticklabels=False
+        showticklabels=False,
+        range=[-0.15, 0.15]
     ),
     title='Player Stats',
     height=800)
