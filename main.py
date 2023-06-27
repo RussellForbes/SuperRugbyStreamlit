@@ -10,7 +10,6 @@ minutes_df = pd.read_csv('minutes_df.csv')
 # --------------------------------------------------------------------------------------------------------------------
 team_list = minutes_df['Team'].unique().tolist()
 
-
 st.set_page_config(page_title="2023 Super Rugby")
 st.subheader('2023 Super Rugby Player Stats')
 
@@ -24,7 +23,7 @@ single_player_df = single_player_df.copy()
 single_player_df['Y Position'] = np.random.uniform(-0.05, 0.05)
 single_player_df['Y Zero'] = 0
 
-#st.dataframe(grouped_df[grouped_df['Player Name'] == player_1_selection][
+# st.dataframe(grouped_df[grouped_df['Player Name'] == player_1_selection][
 #                 ['Player Name', 'Tries', 'Metres carried', 'Carries', 'Defenders beaten', 'Clean breaks', 'Passes',
 #                  'Offloads', 'Turnovers conceded',
 #                  'Try assists', 'Points', 'Tackles', 'Missed tackles', 'Turnovers won', 'Kicks in play']])
@@ -69,8 +68,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['C
                          text=round(single_player_df['Carries per 80'].iloc[0], 1).astype(
                              str) + " Carries per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=2, col=1)
 
 # TRACE 3 - METRES CARRIED
@@ -88,8 +87,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['M
                          text=round(single_player_df['Metres carried per 80'].iloc[0], 1).astype(
                              str) + " Metres carried per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=3, col=1)
 
 # TRACE 4 - CLEAN BREAKS
@@ -106,10 +105,9 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['C
                          text=round(single_player_df['Clean breaks per 80'].iloc[0], 1).astype(
                              str) + " Clean breaks per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=4, col=1)
-
 
 # TRACE 5 - DEFENDERS BEATEN
 fig.add_trace(go.Scatter(y=y_position_list, x=grouped_df['Defenders beaten per 80'],
@@ -126,8 +124,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['D
                          text=round(single_player_df['Defenders beaten per 80'].iloc[0], 1).astype(
                              str) + " Defenders beaten per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=1, col=2)
 
 # TRACE 6 - OFFLOADS
@@ -145,8 +143,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['O
                          text=round(single_player_df['Offloads per 80'].iloc[0], 1).astype(
                              str) + " Offloads per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=2, col=2)
 
 # TRACE 7 - TACKLES
@@ -164,8 +162,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['T
                          text=round(single_player_df['Tackles per 80'].iloc[0], 1).astype(
                              str) + " Tackles per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=3, col=2)
 
 # TRACE 8 - TURNOVERS WON
@@ -183,8 +181,8 @@ fig.add_trace(go.Scatter(y=single_player_df['Y Position'], x=single_player_df['T
                          text=round(single_player_df['Turnovers won per 80'].iloc[0], 1).astype(
                              str) + " Turnovers won per 80",
                          textposition='top center',
-                         marker=dict(color='aqua', size=20,line=dict(width=2,
-                                               color='black')),
+                         marker=dict(color='aqua', size=20, line=dict(width=2,
+                                                                      color='black')),
                          textfont=dict(color='white')), row=4, col=2)
 
 fig.update_layout(
@@ -209,11 +207,31 @@ fig.update_layout(
         showgrid=False,
         showticklabels=False
     ),
+    xaxis5=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False
+    ),
+    xaxis6=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False
+    ),
+    xaxis7=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False
+    ),
+    xaxis8=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False
+    ),
     yaxis=dict(
         showline=False,
         showgrid=False,
         showticklabels=False,
-        range=[-0.15,0.15]
+        range=[-0.15, 0.15]
     ),
     yaxis2=dict(
         showline=False,
@@ -233,8 +251,32 @@ fig.update_layout(
         showticklabels=False,
         range=[-0.15, 0.15]
     ),
+
+    yaxis5=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False,
+        range=[-0.15, 0.15]
+    ),
+    yaxis6=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False,
+        range=[-0.15, 0.15]
+    ),
+    yaxis7=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False,
+        range=[-0.15, 0.15]
+    ),
+    yaxis8=dict(
+        showline=False,
+        showgrid=False,
+        showticklabels=False,
+        range=[-0.15, 0.15]
+    ),
     title='Player Stats',
     height=800)
 
 st.plotly_chart(fig)
-
