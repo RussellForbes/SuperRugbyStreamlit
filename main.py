@@ -32,7 +32,7 @@ single_player_df['Y Zero'] = 0
 # y_position_list = np.linspace(0, 0, len(grouped_df['Player Name']))
 y_position_list = np.random.uniform(-0.05, 0.05, len(grouped_df['Player Name']))
 
-fig = make_subplots(rows=6, cols=1, vertical_spacing=0.2)
+fig = make_subplots(rows=6, cols=1)
 
 # TRACE 1
 fig.add_trace(go.Scatter(y=y_position_list, x=grouped_df['Tries per 80'],
