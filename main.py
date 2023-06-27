@@ -10,6 +10,7 @@ minutes_df = pd.read_csv('minutes_df.csv')
 # --------------------------------------------------------------------------------------------------------------------
 team_list = minutes_df['Team'].unique().tolist()
 
+
 st.set_page_config(page_title="2023 Super Rugby")
 st.subheader('2023 Super Rugby Player Stats')
 
